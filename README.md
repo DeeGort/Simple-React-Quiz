@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# Simple-React-Quiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple-React-Quiz is a React-based quiz application that allows creating questions and handling answers. The answers are evaluated based on a 'solution' array.
 
-## Available Scripts
+## Usage
 
-In the project directory, you can run:
+To use the quiz, follow these steps:
 
-### `npm start`
+1. Install `npm install`
+2. Run `npm run`
+3. Create questions, answers and solutiuons for the quiz in the `data.js`. 
+In real-world usage, you would likely receive this data through an API. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Simple-React-Quiz application consists of the following components:
 
-### `npm test`
+- **App**: The app component where the data and the app meet.
+- **Quiz**: The main component that controls the quiz and handles the display of questions.
+- **Question**: A component representing a question, displaying the question and answer options.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Data Structure
 
-### `npm run build`
+The quiz uses the following data structure:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```js
+{
+    "name": "Essentials",
+    "quiz": {
+        "title": "Essentials",
+        "questions": [
+            {
+                "question": "Nemed?",
+                "answers": [
+                    "Hölgy",
+                    "Úr"
+                ],
+                "select": 1,
+                "description": ""
+            },
+            {
+                "question": "Mit látsz, ha a tükörben nézel?",
+                "answers": [
+                    "A finom vonalak és az első ráncok már láthatók",
+                    "A markáns vonalak és redők jól láthatók"
+                ],
+                "select": 1,
+                "description": ""
+            },
+            {
+                "question": "Hány éves vagy?",
+                "answers": [
+                    "40 évnél fiatalabb",
+                    "40 évnél idősebb"
+                ],
+                "select": 1,
+                "description": ""
+            },
+        ],
+        "solutions": [
+            {
+                "solution": [
+                    ["Hölgy"],
+                    ["A finom vonalak és az első ráncok már láthatók"],
+                    ["40 évnél fiatalabb"]
+                ],
+                "action": "Action 1"
+            },
+            {
+                "solution": [
+                    ["Hölgy"],
+                    ["A finom vonalak és az első ráncok már láthatók"],
+                    ["40 évnél idősebb"]
+                ],
+                "action": "Action 2"
+            },
+            {
+                "solution": [
+                    ["Hölgy"],
+                    ["A markáns vonalak és redők jól láthatók"],
+                    ["40 évnél fiatalabb"]
+                ],
+                "action": "Action 3"
+            },
+            {
+                "solution": [
+                    ["Hölgy"],
+                    ["A markáns vonalak és redők jól láthatók"],
+                    ["40 évnél idősebb"]
+                ],
+                "action": "Action 4"
+            },
+            {
+                "solution": [
+                    ["Úr"],
+                    ["A finom vonalak és az első ráncok már láthatók"],
+                    ["40 évnél fiatalabb"]
+                ],
+                "action": "Action 5"
+            },
+            {
+                "solution": [
+                    ["Úr"],
+                    ["A finom vonalak és az első ráncok már láthatók"],
+                    ["40 évnél idősebb"]
+                ],
+                "action": "Action 6"
+            },
+            {
+                "solution": [
+                    ["Úr"],
+                    ["A markáns vonalak és redők jól láthatók"],
+                    ["40 évnél fiatalabb"]
+                ],
+                "action": "Action 7"
+            },
+            {
+                "solution": [
+                    ["Úr"],
+                    ["A markáns vonalak és redők jól láthatók"],
+                    ["40 évnél idősebb"]
+                ],
+                "action": "Action 8"
+            }
+        ]
+    }
+}
+```
+The 'question' field contains the question.
+The 'answers' field contains the answer options.
+The 'solution' array contains the potential answers.
+The 'action' is the data when a solution passed.
