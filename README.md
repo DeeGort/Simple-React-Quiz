@@ -2,6 +2,10 @@
 
 Simple-React-Quiz is a React-based quiz application that allows creating questions and handling answers. The answers are evaluated based on a 'solution' array.
 
+
+## Demo
+[Demo page](https://deegort.github.io/Simple-React-Quiz/)
+
 ## Usage
 
 To use the quiz, follow these steps:
